@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do Mundo 2026 - História e Previsões</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --green: #00b14f;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+        
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: #00b14f;
+            border: 4px solid white;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #00b14f;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .trophy-spin {
+            animation: spin 20s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+    <!-- HEADER -->
+    <header class="bg-black sticky top-0 z-50 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-trophy text-4xl text-emerald-500"></i>
+                <div>
+                    <h1 class="text-3xl font-bold tracking-tighter">Copa 2026</h1>
+                    <p class="text-xs text-emerald-400 -mt-1">FIFA World Cup</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#historia" class="nav-link">História</a>
+                <a href="#lendas" class="nav-link">Lendas</a>
+                <a href="#2026" class="nav-link">Copa 2026</a>
+            </nav>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="toggleDarkMode()" class="p-3 hover:bg-zinc-900 rounded-xl">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#2026" 
+                   class="bg-emerald-600 hover:bg-emerald-500 transition-colors px-6 py-3 rounded-2xl font-semibold flex items-center gap-2">
+                    <i class="fa-solid fa-futbol"></i>
+                    Previsões 2026
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center relative">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full mb-6 border border-white/20">
+                <span class="text-emerald-400">🏆</span>
+                <span class="text-sm tracking-widest">ESTADOS UNIDOS • MÉXICO • CANADÁ</span>
+            </div>
+            
+            <h1 class="text-7xl md:text-8xl font-bold leading-none mb-6 tracking-tighter">
+                A MAIOR<br>COMPETIÇÃO<br>DO MUNDO
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-zinc-300 max-w-2xl mx-auto mb-10">
+                Da primeira edição em 1930 até a grande final de 2026. 
+                Reviva as glórias e prepare-se para o futuro.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#historia" 
+                   class="bg-white text-black hover:bg-zinc-200 transition-colors px-8 py-4 rounded-2xl font-semibold text-lg inline-flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Explorar a História
+                </a>
+                <a href="#2026" 
+                   class="border-2 border-white hover:bg-white/10 transition-colors px-8 py-4 rounded-2xl font-semibold text-lg inline-flex items-center justify-center gap-3">
+                    Ver Favoritos 2026 →
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <div class="text-xs tracking-widest mb-2">ROLE PARA BAIXO</div>
+            <i class="fa-solid fa-chevron-down animate-bounce text-3xl"></i>
+        </div>
+    </section>
+
+    <!-- HISTÓRIA - TIMELINE -->
+    <section id="historia" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col items-center text-center mb-16">
+                <span class="px-4 py-2 bg-emerald-900 text-emerald-300 rounded-full text-sm font-medium">1930 — 2022</span>
+                <h2 class="text-5xl font-bold mt-4 tracking-tighter">História das Copas</h2>
+                <p class="text-zinc-400 mt-3 max-w-md">Resumos breves, vencedores e lendas de algumas edições</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- 1930 -->
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-4">
+                        <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                            <img src="https://image.isu.pub/220713010027-201ffaeb3535e3e5a3ceb0cfb7dd4dd0/jpg/page_1_social_preview.jpg" alt="Uruguai 1930" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-4xl font-bold">1930</span>
+                                        <span class="block text-emerald-400">Uruguai</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-5xl">🇺🇾</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-semibold mt-4">Uruguai Campeão</h3>
+                                <p class="text-zinc-400 text-sm mt-2">Primeira Copa do Mundo. Uruguai vence a Argentina por 4-2 na final.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <div class="bg-zinc-800/70 border border-zinc-700 rounded-3xl p-8">
+                            <h4 class="font-medium text-emerald-400 mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-star"></i> Lenda da Copa
+                            </h4>
+                            <div class="flex items-center gap-6">
+                                <div class="w-24 h-24 bg-zinc-700 rounded-2xl overflow-hidden">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz9UOJB8XEO1tgYC8HoscGfvhJ7VSaf2MBcA&s" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <p class="text-xl font-semibold">José Nasazzi</p>
+                                    <p class="text-zinc-400">"El Mariscal" - Capitão uruguaio e grande líder defensivo da primeira Copa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1958 -->
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-8 order-2 md:order-1">
+                        <div class="bg-zinc-800/70 border border-zinc-700 rounded-3xl p-8">
+                            <h4 class="font-medium text-emerald-400 mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-star"></i> Lenda da Copa
+                            </h4>
+                            <div class="flex items-center gap-6">
+                                <div class="w-24 h-24 bg-zinc-700 rounded-2xl overflow-hidden">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGkEAclS8FEhvS8IvXcaW5jp123Ut94NP8Tw&s">
+                                </div>
+                                <div>
+                                    <p class="text-xl font-semibold">Pelé (17 anos)</p>
+                                    <p class="text-zinc-400">Explode no cenário mundial com 6 gols, incluindo na final contra a Suécia (5-2).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 order-1 md:order-2">
+                        <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                            <img src="https://ludopedio.org.br/wp-content/uploads/Winning_brazilian_National_team_1958-1.jpg">
+                            <div class="p-6">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-4xl font-bold">1958</span>
+                                        <span class="block text-emerald-400">Suécia</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-5xl">🇧🇷</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-semibold mt-4">Brasil Campeão</h3>
+                                <p class="text-zinc-400 text-sm mt-2">Primeiro título do Brasil. Início da era Pelé.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1986 -->
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-4">
+                        <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                            <img src="data:image/jpeg;base64,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" alt="México 1986" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-4xl font-bold">1986</span>
+                                        <span class="block text-emerald-400">México</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-5xl">🇦🇷</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-semibold mt-4">Argentina Campeão</h3>
+                                <p class="text-zinc-400 text-sm mt-2">Maradona brilha com a "Mão de Deus" e o gol do século.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <div class="bg-zinc-800/70 border border-zinc-700 rounded-3xl p-8">
+                            <h4 class="font-medium text-emerald-400 mb-3">Lenda da Copa</h4>
+                            <div class="flex items-center gap-6">
+                                <div class="w-24 h-24 bg-zinc-700 rounded-2xl overflow-hidden">
+                                    <img src="https://cdn.conmebol.com/wp-content/uploads/2013/06/diego-maradona-mundial-86-674601.jpg" alt="Maradona" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <p class="text-xl font-semibold">Diego Maradona</p>
+                                    <p class="text-zinc-400">Único jogador a carregar um time quase sozinho para o título.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-4">
+                        <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover">
+                            <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/12/messi-foto-mais-curtida.jpg?w=1200&h=900&crop=1" alt="Qatar 2022" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <span class="text-4xl font-bold">2022</span>
+                                        <span class="block text-emerald-400">Qatar</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-5xl">🇦🇷</span>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-semibold mt-4">Argentina Campeão</h3>
+                                <p class="text-zinc-400 text-sm mt-2">Messi finalmente levanta a taça após final épica contra a França.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8">
+                        <div class="bg-zinc-800/70 border border-zinc-700 rounded-3xl p-8">
+                            <h4 class="font-medium text-emerald-400 mb-3">Lenda da Copa</h4>
+                            <div class="flex items-center gap-6">
+                                <div class="w-24 h-24 bg-zinc-700 rounded-2xl overflow-hidden">
+                                    <img src="https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2022/12/03/638ba710cd1c8.jpeg" alt="Messi" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <p class="text-xl font-semibold">Lionel Messi</p>
+                                    <p class="text-zinc-400">Consagração definitiva. Melhor jogador da competição.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LENDAS GLOBAIS -->
+    <section id="lendas" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold tracking-tighter">Lendas Eternas da Copa</h2>
+                <p class="text-zinc-400 mt-3">Os maiores nomes que marcaram a história do torneio</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900 rounded-3xl p-8 card-hover border border-zinc-800">
+                    <div class="h-2 w-16 bg-yellow-500 rounded mb-6"></div>
+                    <h3 class="text-3xl font-bold">Pelé</h3>
+                    <p class="text-emerald-400">Brasil • 3 títulos (1958, 62, 70)</p>
+                    <p class="mt-6 text-zinc-400">O Rei. Único tricampeão do mundo.</p>
+                </div>
+                
+                <div class="bg-zinc-900 rounded-3xl p-8 card-hover border border-zinc-800">
+                    <div class="h-2 w-16 bg-blue-500 rounded mb-6"></div>
+                    <h3 class="text-3xl font-bold">Diego Maradona</h3>
+                    <p class="text-emerald-400">Argentina • 1986</p>
+                    <p class="mt-6 text-zinc-400">"El Pibe de Oro". Gênio que carregou a Argentina nas costas.</p>
+                </div>
+                
+                <div class="bg-zinc-900 rounded-3xl p-8 card-hover border border-zinc-800">
+                    <div class="h-2 w-16 bg-purple-500 rounded mb-6"></div>
+                    <h3 class="text-3xl font-bold">Lionel Messi</h3>
+                    <p class="text-emerald-400">Argentina • 2022</p>
+                    <p class="mt-6 text-zinc-400">Consagrado em Qatar. O melhor de todos para muitos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREVISÕES 2026 -->
+    <section id="2026" class="py-24 bg-gradient-to-b from-zinc-900 to-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Favoritos -->
+                <div>
+                    <h2 class="text-5xl font-bold tracking-tighter mb-8">Favoritos para 2026</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6 bg-zinc-900 p-6 rounded-3xl border border-emerald-900/50">
+                            <div class="text-6xl">🇪🇸</div>
+                            <div class="flex-1">
+                                <div class="flex justify-between">
+                                    <h3 class="text-2xl font-semibold">Espanha</h3>
+                                    <span class="text-emerald-400 font-mono">+450</span>
+                                </div>
+                                <p class="text-zinc-400">Favorita principal. Time jovem e dominante.</p>
+                                <div class="mt-4 text-sm">
+                                    <span class="inline-block px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full">Lamine Yamal</span>
+                                    <span class="inline-block px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full ml-2">Rodri</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-6 bg-zinc-900 p-6 rounded-3xl">
+                            <div class="text-6xl">🇫🇷</div>
+                            <div class="flex-1">
+                                <div class="flex justify-between">
+                                    <h3 class="text-2xl font-semibold">França</h3>
+                                    <span class="text-emerald-400 font-mono">+475</span>
+                                </div>
+                                <p class="text-zinc-400">Mbappé em busca do primeiro título.</p>
+                                <div class="mt-4 text-sm">
+                                    <span class="inline-block px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full">Kylian Mbappé</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-6 bg-zinc-900 p-6 rounded-3xl">
+                            <div class="text-6xl">🏴󠁧󠁢󠁥</div>
+                            <div class="flex-1">
+                                <div class="flex justify-between">
+                                    <h3 class="text-2xl font-semibold">Inglaterra</h3>
+                                    <span class="text-emerald-400 font-mono">+700</span>
+                                </div>
+                                <p class="text-zinc-400">Elenco recheado de estrelas.</p>
+                                <div class="mt-4 text-sm">
+                                    <span class="inline-block px-3 py-1 bg-emerald-900 text-emerald-300 rounded-full">Harry Kane</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Candidatos a Melhor Jogador -->
+                <div>
+                    <h2 class="text-5xl font-bold tracking-tighter mb-8">Candidatos ao Melhor Jogador</h2>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="bg-zinc-900 rounded-3xl p-6 card-hover">
+                            <span class="text-6xl mb-4 block">🇪🇸</span>
+                            <p class="font-semibold text-xl">Lamine Yamal</p>
+                            <p class="text-emerald-400 text-sm">Espanha - Fenômeno jovem</p>
+                        </div>
+                        <div class="bg-zinc-900 rounded-3xl p-6 card-hover">
+                            <span class="text-6xl mb-4 block">🇦🇷</span>
+                            <p class="font-semibold text-xl">Lionel Messi</p>
+                            <p class="text-emerald-400 text-sm">Argentina - Defendendo o título</p>
+                        </div>
+                        <div class="bg-zinc-900 rounded-3xl p-6 card-hover">
+                            <span class="text-6xl mb-4 block">🇫🇷</span>
+                            <p class="font-semibold text-xl">Kylian Mbappé</p>
+                            <p class="text-emerald-400 text-sm">França - Velocidade letal</p>
+                        </div>
+                        <div class="bg-zinc-900 rounded-3xl p-6 card-hover">
+                            <span class="text-6xl mb-4 block">🇧🇷</span>
+                            <p class="font-semibold text-xl">Vinicius Jr.</p>
+                            <p class="text-emerald-400 text-sm">Brasil - Drible e gol</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 text-center">
+                <div class="inline-flex items-center gap-4 bg-zinc-900 px-8 py-6 rounded-3xl">
+                    <i class="fa-solid fa-trophy text-5xl text-yellow-400 trophy-spin"></i>
+                    <div class="text-left">
+                        <p class="text-emerald-400 font-medium">Final: 19 de Julho de 2026</p>
+                        <p class="text-2xl font-bold">MetLife Stadium • Nova Jersey</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 text-center text-zinc-500 text-sm">
+            <p>Site demonstrativo feito com ❤️ para fãs da Copa do Mundo</p>
+            <p class="mt-2">Dados baseados em fontes públicas • Imagens ilustrativas</p>
+            <div class="flex justify-center gap-6 mt-8 text-xl">
+                <i class="fa-brands fa-instagram hover:text-white cursor-pointer"></i>
+                <i class="fa-brands fa-x-twitter hover:text-white cursor-pointer"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            // O site já está em dark mode, mas deixa a função para futuro
+            alert("Modo escuro ativado por padrão! ⚫");
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Tailwind script já incluído via CDN
+        console.log("%cSite da Copa do Mundo carregado com sucesso! 🏆", "color: #00b14f; font-family: monospace");
+    </script>
+</body>
+</html>
